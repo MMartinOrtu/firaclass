@@ -7,6 +7,11 @@ public class Feria {
 		
 	
 	/**
+	 * 
+	 */
+	public Feria() {
+	}
+	/**
 	 * @param nombre
 	 * @param superficieFeria
 	 */

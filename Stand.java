@@ -7,6 +7,12 @@ public class Stand {
 	
 	
 	/**
+	 * 
+	 */
+	public Stand() {
+	}
+
+	/**
 	 * @param id
 	 * @param superficie
 	 * @param precio
