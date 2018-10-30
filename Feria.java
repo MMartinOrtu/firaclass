@@ -5,7 +5,6 @@ public class Feria {
 	private int superficieFeria;	
 	private ArrayList<Stand> listaStands = new ArrayList<Stand>();
 		
-	
 	/**
 	 * 
 	 */

@@ -4,32 +4,23 @@ public class Modular extends Stand {
 	private final String TIPO_STAND = "Modular";	
 	private int numeroModulos;
 	
-	
-	
 	/**
 	 * 
 	 */
 	public Modular() {
 	}
+	
 	/**
 	 * @param id
 	 * @param superficie
 	 * @param d
 	 * @param numeroModulos
 	 */
-	
 	public Modular(int id, int superficie, double d, int numeroModulos) {
 		super(id, superficie, d);
 		this.numeroModulos = numeroModulos;
 	}
-	/**
-	 * @param id
-	 * @param superficie
-	 * @param precio
-	 */
-	public Modular(int id, int superficie, double precio) {
-		super(id, superficie, precio);
-	}
+
 	/**
 	 * @return the numeroModulos
 	 */

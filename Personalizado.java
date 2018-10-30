@@ -3,15 +3,12 @@ public class Personalizado extends Stand  {
 
 	private final String TIPO_STAND = "Personalizado";
 	private String caracteristicas;
-	
-	
-	
+			
 	/**
 	 * 
 	 */
 	public Personalizado() {
 	}
-
 
 	/**
 	 * @param id
