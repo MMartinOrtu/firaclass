@@ -48,8 +48,8 @@ public class Personalizado extends Stand  {
 	@Override
 	public String toString() {
 		return String.format(
-				"Personalizado [TIPO_STAND=%s, caracteristicas=%s, getId()=%s, getSuperficie()=%s, getPrecio()=%s]",
-				TIPO_STAND, caracteristicas, getId(), getSuperficie(), getPrecio());
+				"Personalizado [ID_STAND=%s, TIPO_DE_STAND=%s, CRACTERISTICAS=%s,  getSuperficie()=%s metros, getPrecio()=%s euros]\n",
+				getId(), TIPO_STAND, caracteristicas,  getSuperficie(), getPrecio());
 	}
 	
 	

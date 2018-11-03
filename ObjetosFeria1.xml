@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_181" class="java.beans.XMLDecoder">
+ <object class="Feria" id="Feria0">
+  <void property="listaStands">
+   <void method="add">
+    <object class="Modular">
+     <void property="id">
+      <int>1</int>
+     </void>
+     <void property="numeroModulos">
+      <int>2</int>
+     </void>
+     <void property="precio">
+      <double>240.5</double>
+     </void>
+     <void property="superficie">
+      <int>10</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Modular">
+     <void property="id">
+      <int>2</int>
+     </void>
+     <void property="numeroModulos">
+      <int>3</int>
+     </void>
+     <void property="precio">
+      <double>140.5</double>
+     </void>
+     <void property="superficie">
+      <int>12</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Personalizado">
+     <void property="caracteristicas">
+      <string>stand con pantallas digitales</string>
+     </void>
+     <void property="id">
+      <int>3</int>
+     </void>
+     <void property="precio">
+      <double>350.0</double>
+     </void>
+     <void property="superficie">
+      <int>20</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="Personalizado">
+     <void property="caracteristicas">
+      <string>stand con palets de madera</string>
+     </void>
+     <void property="id">
+      <int>4</int>
+     </void>
+     <void property="precio">
+      <double>360.0</double>
+     </void>
+     <void property="superficie">
+      <int>25</int>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="nombre">
+   <string>Feria Digital</string>
+  </void>
+  <void property="superficieFeria">
+   <int>300</int>
+  </void>
+ </object>
+</java>

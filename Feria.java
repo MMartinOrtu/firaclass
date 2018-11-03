@@ -52,12 +52,14 @@ public class Feria {
 	public void setSuperficieFeria(int superficieFeria) {
 		this.superficieFeria = superficieFeria;
 	}
+	
 	/**
 	 * @return the listaStands
 	 */
 	public ArrayList<Stand> getListaStands() {
 		return listaStands;
 	}
+
 	/**
 	 * @param listaStands the listaStands to set
 	 */
@@ -70,18 +72,29 @@ public class Feria {
 	 * al listado de Stands
 	 * @param stand - nombre del objeto Stand
 	 */
-	public void addStand(Stand stand) {
-		this.listaStands.add(stand);
+
+	public boolean addStand(Stand stand) {
+		boolean noExists = true;
+		for (int i=0;i<this.listaStands.size(); i++) {
+				if (stand.equals(this.listaStands.get(i))){
+					noExists = false;
+					System.out.println("Este stand no se puede añadir porque ya existe");
+					break;
+				}
+		}
+		if (noExists) {	
+			this.listaStands.add(stand);
+			System.out.println("Stand añadido correctamente a la Feria");
+		}
+		return noExists;
 	}
-	
 	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return String.format("Feria [nombre=%s, superficieFeria=%s, listaStands=%s]", nombre, superficieFeria,
-				listaStands);
+		return String.format("Feria [NOMBRE=%s, SUPERFICIE DE_LA_FERIA=%s metras, LISTADO_DE_STANDS=%s]", nombre, superficieFeria, listaStands);
 	}
 
 		

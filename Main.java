@@ -8,28 +8,32 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Modular modular1 = new Modular(1, 10 , 24.12, 2);
-		Personalizado personalizado2 = new Personalizado(1, 10 , 24.12, "colores vivos");
+		// Creo de los stands
+		Modular modular1 = new Modular(1, 10, 240.50, 2);
+		Modular modular2 = new Modular(2, 12, 140.50, 3);
+		Personalizado personalizado1 = new Personalizado(3, 20, 350.00, "stand con pantallas digitales");
+		Personalizado personalizado2 = new Personalizado(4, 25, 360.00, "stand con palets de madera");
 		
-		System.out.println(modular1);
-		System.out.println(personalizado2);
+		// Creo la feria
+		Feria feria1 = new Feria("Feria Digital", 300);
 		
-		Feria feria1 = new Feria("coches", 300);
-		
+		// Agrego los satands a la feria
 		feria1.addStand(modular1);
+		feria1.addStand(modular2);
+		feria1.addStand(personalizado1);
 		feria1.addStand(personalizado2);
 		
-		System.out.println(feria1.getListaStands());
+		//Imprimo por pantalla la lista de stands		
+		System.out.println(feria1);
 		
 
 		try {
-			XMLEncoder e = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("prueba.xml")));
+			XMLEncoder e = new XMLEncoder(new BufferedOutputStream(new FileOutputStream("ObjetosFeria1.xml")));
 			e.writeObject(feria1);
 			e.close();
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			System.out.println(modular1);
 			e.printStackTrace();
 		}
 

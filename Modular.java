@@ -44,7 +44,8 @@ public class Modular extends Stand {
 	 */
 	@Override
 	public String toString() {
-		return String.format("Modular [TIPO_STAND=%s, numeroModulos=%s]", TIPO_STAND, numeroModulos);
+		return String.format("Modular [ID_STAND=%s, TIPO_DE_STAND=%s, NUMERO_DE_MODULOS=%s, getSuperficie()=%s metros, getPrecio()=%s euros]\n",
+				getId(), TIPO_STAND, numeroModulos, getSuperficie(), getPrecio());
 	}
 
 	
