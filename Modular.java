@@ -1,7 +1,7 @@
 
 public class Modular extends Stand {
 
-	private final String TIPO_STAND = "Modular";	
+	private String tipoStand;	
 	private int numeroModulos;
 	
 	/**
@@ -16,8 +16,9 @@ public class Modular extends Stand {
 	 * @param d
 	 * @param numeroModulos
 	 */
-	public Modular(int id, int superficie, double d, int numeroModulos) {
-		super(id, superficie, d);
+	public Modular(int superficie, double precio, int numeroModulos) {
+		super(superficie, precio);
+		this.tipoStand = "MODULAR";
 		this.numeroModulos = numeroModulos;
 	}
 
@@ -33,19 +34,28 @@ public class Modular extends Stand {
 	public void setNumeroModulos(int numeroModulos) {
 		this.numeroModulos = numeroModulos;
 	}
+	
+	/**
+	 * @param tipoStand the tipoStand to set
+	 */
+	public void setTipoStand(String tipoStand) {
+		this.tipoStand = tipoStand;
+	}
+
 	/**
 	 * @return the tIPO_STAND
 	 */
-	public String getTIPO_STAND() {
-		return TIPO_STAND;
+	public String getTipoStand() {
+		return tipoStand;
 	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return String.format("Modular [ID_STAND=%s, TIPO_DE_STAND=%s, NUMERO_DE_MODULOS=%s, getSuperficie()=%s metros, getPrecio()=%s euros]\n",
-				getId(), TIPO_STAND, numeroModulos, getSuperficie(), getPrecio());
+		return String.format("Modular [id=%s, tipoStand=%s, numeroModulos=%s, superficie=%s metros, precio=%s euros]\n",
+				getId(),getTipoStand(), numeroModulos, getSuperficie(), getPrecio());
 	}
 
 	

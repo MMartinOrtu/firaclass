@@ -1,10 +1,10 @@
 
 public class Stand {
+	public static int idStand = 1;
 	private int id;
 	private int superficie;
 	private double precio;
-	
-	
+		
 	/**
 	 * 
 	 */
@@ -16,11 +16,13 @@ public class Stand {
 	 * @param superficie
 	 * @param precio
 	 */
-	public Stand(int id, int superficie, double precio) {
-		this.id = id;
+	public Stand(int superficie, double precio) {
+		this.id = idStand++;
 		this.superficie = superficie;
 		this.precio = precio;
 	}
+
+
 
 	/**
 	 * @return the id
@@ -28,13 +30,14 @@ public class Stand {
 	public int getId() {
 		return id;
 	}
-
+	
 	/**
 	 * @param id the id to set
 	 */
 	public void setId(int id) {
 		this.id = id;
 	}
+
 
 	/**
 	 * @return the superficie
@@ -63,32 +66,14 @@ public class Stand {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
-	
 
-
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Stand other = (Stand) obj;
-		if (id != other.id)
-			return false;
-		return true;
-	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return String.format("Stand [ID STAND=%s, SUPERFICIE STAND=%s, PRECIO=%s]", id, superficie, precio);
+		return String.format("Stand [id=%s, suerficie=%s, precio=%s]", id, superficie, precio);
 	}
 	
 	

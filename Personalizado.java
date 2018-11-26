@@ -1,7 +1,7 @@
 
 public class Personalizado extends Stand  {
 
-	private final String TIPO_STAND = "Personalizado";
+	private String tipoStand;
 	private String caracteristicas;
 			
 	/**
@@ -16,9 +16,10 @@ public class Personalizado extends Stand  {
 	 * @param precio
 	 * @param caracteristicas
 	 */
-	public Personalizado(int id, int superficie, double precio, String caracteristicas) {
-		super(id, superficie, precio);
+	public Personalizado(int superficie, double precio, String caracteristicas) {
+		super(superficie, precio);
 		this.caracteristicas = caracteristicas;
+		this.tipoStand = "PERSONALIZADO";
 	}
 	
 	
@@ -34,13 +35,20 @@ public class Personalizado extends Stand  {
 	public void setCaracteristicas(String caracteristicas) {
 		this.caracteristicas = caracteristicas;
 	}
+
 	/**
-	 * @return the tIPO_STAND
+	 * @return the tipoStand
 	 */
-	public String getTIPO_STAND() {
-		return TIPO_STAND;
+	public String getTipoStand() {
+		return tipoStand;
 	}
 
+	/**
+	 * @param tipoStand the tipoStand to set
+	 */
+	public void setTipoStand(String tipoStand) {
+		this.tipoStand = tipoStand;
+	}
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
@@ -48,8 +56,8 @@ public class Personalizado extends Stand  {
 	@Override
 	public String toString() {
 		return String.format(
-				"Personalizado [ID_STAND=%s, TIPO_DE_STAND=%s, CRACTERISTICAS=%s,  getSuperficie()=%s metros, getPrecio()=%s euros]\n",
-				getId(), TIPO_STAND, caracteristicas,  getSuperficie(), getPrecio());
+				"Personalizado [id=%s, tipoStand=%s, caracteristicas=%s,  superficie=%s metros, precio=%s euros]\n",
+				getId(), getTipoStand(), getCaracteristicas(),  getSuperficie(), getPrecio());
 	}
 	
 	
