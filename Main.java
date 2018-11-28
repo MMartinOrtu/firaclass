@@ -15,7 +15,7 @@ public class Main {
 		Personalizado personalizado2 = new Personalizado(25, 360.00, "stand con palets de madera");
 		
 		// Creo la feria
-		Feria feria1 = new Feria(1, "Feria Digital", 300);
+		Feria feria1 = new Feria("Feria Digital", 300);
 		
 		//Instancio el FeriaDAOFactory
 		FeriaDAOFactory factory = new FeriaDAOFactory();

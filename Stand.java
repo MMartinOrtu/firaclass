@@ -5,9 +5,6 @@ public class Stand {
 	private int superficie;
 	private double precio;
 		
-	/**
-	 * 
-	 */
 	public Stand() {
 	}
 
@@ -37,7 +34,6 @@ public class Stand {
 	public void setId(int id) {
 		this.id = id;
 	}
-
 
 	/**
 	 * @return the superficie

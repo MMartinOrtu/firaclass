@@ -1,22 +1,18 @@
-import java.util.ArrayList;
 
 public class Feria {
-	
+	public static int idFeria = 1;
 	private int id;
 	private String nombre;
 	private int superficieFeria;	
 		
-	/**
-	 * 
-	 */
 	public Feria() {
 	}
 	/**
 	 * @param nombre
 	 * @param superficieFeria
 	 */
-	public Feria(int id, String nombre, int superficieFeria) {
-		this.id = id;
+	public Feria(String nombre, int superficieFeria) {
+		this.id = idFeria++;
 		this.nombre = nombre;
 		this.superficieFeria = superficieFeria;
 	}

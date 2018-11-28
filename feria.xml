@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <feria>
+     <field name="id_feria">1</field>
+     <field name="nombre">Feria Digital</field>
+     <field name="superficie_feria">300</field>
+    <stand id_stand="1" superficie="10" precio="240.5">
+      <modular>
+        <field name="id_modular">1</field>
+        <field name="numero_modulos">2</field>
+        <field name="tipo_stand">MODULAR</field>
+      </modular>
+    </stand>
+    <stand id_stand="2" superficie="12" precio="140.5">
+      <modular>
+        <field name="id_modular">2</field>
+        <field name="numero_modulos">3</field>
+        <field name="tipo_stand">MODULAR</field>
+      </modular>
+    </stand>
+    <stand id_stand="3" superficie="20" precio="350.0">
+      <personalizado>
+        <field name="id_personalizado">4</field>
+        <field name="caracteristicas">stand con pantallas digitales</field>
+        <field name="tipo_stand">PERSONALIZADO</field>
+      </personalizado>
+    </stand>
+    <stand id_stand="4" superficie="12" precio="140.5">
+      <personalizado>
+        <field name="id_personalizado">4</field>
+        <field name="caracteristicas">stand con palets de madera</field>
+        <field name="tipo_stand">PERSONALIZADO</field>
+      </personalizado>
+    </stand>
+  </feria>
+
