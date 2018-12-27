@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-dic-2018 14:43:26 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="primero.Modular" table="modular" catalog="fira" optimistic-lock="version">
+        <id name="idModular" type="java.lang.Integer">
+            <column name="id_modular" />
+            <generator class="foreign">
+                <param name="property">stand</param>
+            </generator>
+        </id>
+        <one-to-one name="stand" class="primero.Stand" constrained="true"></one-to-one>
+        <property name="numeroModulos" type="java.lang.Integer">
+            <column name="numero_modulos" />
+        </property>
+        <property name="tipoStand" type="string">
+            <column name="tipo_stand" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

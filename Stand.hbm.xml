@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-dic-2018 14:43:26 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="primero.Stand" table="stand" catalog="fira" optimistic-lock="version">
+        <id name="idStand" type="java.lang.Integer">
+            <column name="id_stand" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="feria" class="primero.Feria" fetch="select">
+            <column name="id_feria" />
+        </many-to-one>
+        <property name="superficie" type="string">
+            <column name="superficie" length="50" />
+        </property>
+        <property name="precio" type="java.lang.Integer">
+            <column name="precio" />
+        </property>
+        <one-to-one name="personalizado" class="primero.Personalizado"></one-to-one>
+        <one-to-one name="modular" class="primero.Modular"></one-to-one>
+    </class>
+</hibernate-mapping>
